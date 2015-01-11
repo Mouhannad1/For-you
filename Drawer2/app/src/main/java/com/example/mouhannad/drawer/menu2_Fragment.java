@@ -42,13 +42,13 @@ public class menu2_Fragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        rootview = inflater.inflate(R.layout.menu1_layout, container, false);
+        rootview = inflater.inflate(R.layout.menu2_layout, container, false);
 
         actorsList = new ArrayList<Actors>();
         new JSONAsyncTask().execute("http://microblogging.wingnity.com/JSONParsingTutorial/jsonActors");
 
 
-        ListView listview = (ListView) getView().findViewById(R.id.list);
+        ListView listview = (ListView) rootview.findViewById(R.id.list);
 
 
         adapter = new ActorAdapter(getActivity().getApplicationContext(), R.layout.row, actorsList);
