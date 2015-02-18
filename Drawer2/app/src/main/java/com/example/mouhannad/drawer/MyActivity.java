@@ -59,7 +59,7 @@ public class MyActivity extends Activity
                 obFragment = new menu2_Fragment();
                 break;
             case 2:
-                obFragment = new menu3_Fragment();
+                obFragment = new menu2_Fragment();
                 break;
         }
 

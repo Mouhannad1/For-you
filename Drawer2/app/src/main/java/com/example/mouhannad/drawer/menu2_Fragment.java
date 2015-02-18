@@ -2,6 +2,8 @@
 package com.example.mouhannad.drawer;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.net.ParseException;
 import android.os.AsyncTask;
@@ -48,7 +50,7 @@ public class menu2_Fragment extends Fragment {
         new JSONAsyncTask().execute("http://microblogging.wingnity.com/JSONParsingTutorial/jsonActors");
 
 
-        ListView listview = (ListView) rootview.findViewById(R.id.list);
+        final ListView listview = (ListView) rootview.findViewById(R.id.list);
 
 
         adapter = new ActorAdapter(getActivity().getApplicationContext(), R.layout.row, actorsList);
@@ -60,7 +62,12 @@ public class menu2_Fragment extends Fragment {
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long id) {
                 // TODO Auto-generated method stub
-                Toast.makeText(getActivity().getApplicationContext(), actorsList.get(position).getName(), Toast.LENGTH_LONG).show();
+                Fragment   obFragment = new menu3_Fragment();
+                Integer fragmentId = (Integer) listview.getTag();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, obFragment);
+                fragmentTransaction.commit();
             }
         });
 
