@@ -2,29 +2,24 @@ package com.example.mouhannad.drawer;
 
 public class Actors {
 
-	private String name;
 	private String description;
-	private String dob;
-	private String country;
-	private String height;
-	private String spouse;
-	private String children;
+	private String price;
+
+    private String name;
+
 	private String image;
 
 	public Actors() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Actors(String name, String description, String dob, String country,
-                  String height, String spouse, String children, String image) {
+	public Actors(String name, String description, String price,
+                    String image) {
 		super();
 		this.name = name;
 		this.description = description;
-		this.dob = dob;
-		this.country = country;
-		this.height = height;
-		this.spouse = spouse;
-		this.children = children;
+		this.price = price;
+
 		this.image = image;
 	}
 
@@ -46,44 +41,14 @@ public class Actors {
 	}
 
 	public String getDob() {
-		return dob;
+		return price;
 	}
 
-	public void setDob(String dob) {
-		this.dob = dob;
+	public void setDob(String price) {
+		this.price= price;
 	}
 
-	public String getCountry() {
-		return country;
-	}
 
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
-	public String getHeight() {
-		return height;
-	}
-
-	public void setHeight(String height) {
-		this.height = height;
-	}
-
-	public String getSpouse() {
-		return spouse;
-	}
-
-	public void setSpouse(String spouse) {
-		this.spouse = spouse;
-	}
-
-	public String getChildren() {
-		return children;
-	}
-
-	public void setChildren(String children) {
-		this.children = children;
-	}
 
 	public String getImage() {
 		return image;

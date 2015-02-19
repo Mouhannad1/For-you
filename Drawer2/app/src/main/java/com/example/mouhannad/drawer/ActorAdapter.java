@@ -41,10 +41,7 @@ public class ActorAdapter extends ArrayAdapter<Actors> {
 			holder.tvName = (TextView) v.findViewById(R.id.tvName);
 			holder.tvDescription = (TextView) v.findViewById(R.id.tvDescriptionn);
 			holder.tvDOB = (TextView) v.findViewById(R.id.tvDateOfBirth);
-			holder.tvCountry = (TextView) v.findViewById(R.id.tvCountry);
-			holder.tvHeight = (TextView) v.findViewById(R.id.tvHeight);
-			holder.tvSpouse = (TextView) v.findViewById(R.id.tvSpouse);
-			holder.tvChildren = (TextView) v.findViewById(R.id.tvChildren);
+
 			v.setTag(holder);
 		} else {
 			holder = (ViewHolder) v.getTag();
@@ -54,10 +51,7 @@ public class ActorAdapter extends ArrayAdapter<Actors> {
 		holder.tvName.setText(actorList.get(position).getName());
 		holder.tvDescription.setText(actorList.get(position).getDescription());
 		holder.tvDOB.setText("B'day: " + actorList.get(position).getDob());
-		holder.tvCountry.setText(actorList.get(position).getCountry());
-		holder.tvHeight.setText("Height: " + actorList.get(position).getHeight());
-		holder.tvSpouse.setText("Spouse: " + actorList.get(position).getSpouse());
-		holder.tvChildren.setText("Children: " + actorList.get(position).getChildren());
+
 		return v;
 
 	}
